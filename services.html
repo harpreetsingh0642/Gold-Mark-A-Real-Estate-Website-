@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+h1
+{
+	color: #C99F56;
+	text-align: center;
+	
+}
+h1:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #35291D;
+    margin: 5px auto;
+}
+.main
+{
+
+}
+/* Slideshow container */
+.slideshow-container {
+  width: 73%;
+  height:695px;
+  float: left;
+  margin: auto;
+  border-style: solid;
+border-radius: 0px;
+border-width: 5px;
+}
+.data
+{   
+	border-style: solid;
+border-radius: 0px;
+border-width: 5px;
+margin-left: 15px;
+	float: left;
+	width: 25%;
+	white-space: initial;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 20 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: initial;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+
+<div class="main">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ 
+  <img src="PROPERTY-MANAGEMENT.jpg" style="width:1085px;height:685px;">
+ 
+</div>
+
+<div class="mySlides fade">
+
+  <img src="BUSINESS-CENTRE.jpg" style="width:1085px;height:685px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="POST-RENTAL-SERVICES.jpg" style="width:1085px;height:685px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="24x7-SERVICE-CENTRE.jpg" style="width:1085px;height:685px;">
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<div class="data">
+	<h1>Post Possession Services</h1>
+	<ul>
+   <li><h4>PROPERTY MANAGEMENT</h4>
+     <p>
+       Keeping your house prim and proper is one of most tedious tasks you encounter, especially when you are travelling or reside in a different city. Our team of professionals will make sure that your house is kept clean and tidy at all times so that when you come back you have a nice and cozy home.
+     </p>
+   </li>
+   <li><h4>BUSINESS CENTRE</h4>
+     <p>
+       When you work at home away from office, a need for personal space is important. Our business centre is for those hours when your work requires an urgent attention when you are at home. A classic conference room, a subtle tea lounge combined with basic facility of decked up pantry and washroom. You can impress your clients with a contemporary interior equipped with Projectors, Wi-Fi Connectivity, Intercom, Music Systems and much much more.
+     </p>
+   </li> 
+   <li><h4>RENTAL-SERVICES</h4>
+     <p>
+      If you decide not to make it your permanent address, renting it out is always a good option. We understand the rigmarole of going through paper work, background verification, rent, security, maintenance and tons of such items.
+    </p>
+    <p>
+      Gold Mark offers you Post Rental Service where we find the ideal Renters for you at the best possible rent. No need to worry about the procedural hassles. We will do all that for you and with the least amount of hassles.
+    </p>
+   </li>
+   <li><h4>24x7 CONCIERGE SERVICES</h4>
+     <p>
+       Calling a handyman and getting chores done is always a pain and not always reliable.
+     </p>
+     <p>
+       You will always have a concierge on call to take care of any plumbing, electrical, masonry, carpenter, beautician, house maid, technician or a doctor, we will have them at your doorstep in a jiffy.
+     </p>
+   </li>   
+  </ul>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
